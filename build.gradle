@@ -17,6 +17,10 @@ tasks.withType(JavaCompile) {
   options.encoding = 'UTF-8'
 }
 
+test {
+  useJUnitPlatform()
+}
+
 license {
   header project.file('header.txt')
   include '**/*.java'
@@ -26,6 +30,11 @@ license {
 repositories {
   mavenLocal()
   mavenCentral()
+}
+
+dependencies {
+  testImplementation 'org.junit.jupiter:junit-jupiter-api:5.3.2'
+  testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.3.2'
 }
 
 task javadocJar(type: Jar) {
