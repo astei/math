@@ -33,6 +33,9 @@ repositories {
 }
 
 dependencies {
+  api 'org.checkerframework:checker-qual:2.5.8'
+  testImplementation 'com.google.truth:truth:0.42'
+  testImplementation 'com.google.truth.extensions:truth-java8-extension:0.42'
   testImplementation 'org.junit.jupiter:junit-jupiter-api:5.3.2'
   testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.3.2'
 }

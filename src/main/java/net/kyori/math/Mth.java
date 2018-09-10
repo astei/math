@@ -47,4 +47,28 @@ public final class Mth {
     if(value > max) return max;
     return value;
   }
+
+  public static int floor(final double dv) {
+    final int iv = (int) dv;
+    return dv < iv ? iv - 1 : iv;
+  }
+
+  public static int floor(final float fv) {
+    final int iv = (int) fv;
+    return fv < iv ? iv - 1 : iv;
+  }
+
+  public static int ceil(final double dv) {
+    final int iv = (int) dv;
+    return dv > iv ? iv + 1 : iv;
+  }
+
+  public static int ceil(final float fv) {
+    final int iv = (int) fv;
+    return fv > iv ? iv + 1 : iv;
+  }
+
+  public static float sqrt(final float value) {
+    return (float) Math.sqrt(value);
+  }
 }

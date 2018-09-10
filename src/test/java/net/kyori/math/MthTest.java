@@ -55,4 +55,28 @@ class MthTest {
     assertEquals(15L, Mth.clamp(15L, 10L, 20L));
     assertEquals(20L, Mth.clamp(21L, 10L, 20L));
   }
+
+  @Test
+  void testFloor_double() {
+    assertEquals(19.0d, Mth.floor(19.9d));
+    assertEquals(21.0d, Mth.floor(21.5d));
+  }
+
+  @Test
+  void testFloor_float() {
+    assertEquals(19.0f, Mth.floor(19.9f));
+    assertEquals(21.0f, Mth.floor(21.5f));
+  }
+
+  @Test
+  void testCeil_double() {
+    assertEquals(20.0d, Mth.ceil(19.9d));
+    assertEquals(22.0d, Mth.ceil(21.5d));
+  }
+
+  @Test
+  void testCeil_float() {
+    assertEquals(20.0f, Mth.ceil(19.9f));
+    assertEquals(22.0f, Mth.ceil(21.5f));
+  }
 }
