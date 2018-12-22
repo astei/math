@@ -160,4 +160,8 @@ public interface Vector3d extends Vectord {
       && this.y() == that.y()
       && this.z() == that.z();
   }
+
+  default double dot(Vector3d other) {
+    return this.x() * other.x() + this.y() * other.y() + this.z() * other.z();
+  }
 }

@@ -205,4 +205,12 @@ class ImVector3iTest {
     assertEquals(zero().hashCode(), of(0, 0, 0).hashCode());
     assertNotEquals(zero().hashCode(), of(0, 0, 1).hashCode());
   }
+
+  @Test
+  void testDot() {
+    assertEquals(0, of(1, 1, 1).dot(zero()));
+    // dotting a vector with itself is its length squared
+    assertEquals(3, of(1, 1, 1).dot(of(1, 1, 1)));
+    assertEquals(3, of(3, 2, 4).dot(of(1, -2, 1)));
+  }
 }

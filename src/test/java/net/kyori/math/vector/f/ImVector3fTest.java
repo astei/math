@@ -272,4 +272,12 @@ class ImVector3fTest {
     assertEquals(zero().hashCode(), of(0f, 0f, 0f).hashCode());
     assertNotEquals(zero().hashCode(), of(0f, 0f, 1f).hashCode());
   }
+
+  @Test
+  void testDot() {
+    assertEquals(0f, of(1f, 1f, 1f).dot(zero()));
+    // dotting a vector with itself is its length squared
+    assertEquals(3f, of(1f, 1f, 1f).dot(of(1f, 1f, 1f)));
+    assertEquals(3f, of(3f, 2f, 4f).dot(of(1f, -2f, 1f)));
+  }
 }
