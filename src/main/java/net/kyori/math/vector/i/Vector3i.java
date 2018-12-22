@@ -149,7 +149,11 @@ public interface Vector3i extends Vectori {
       && this.z() == that.z();
   }
 
+  default int dot(final int x, final int y, final int z) {
+    return this.x() * x + this.y() * y + this.z() * z;
+  }
+
   default int dot(final Vector3i that) {
-    return this.x() * that.x() + this.y() * that.y() + this.z() * that.z();
+    return this.dot(that.x(), that.y(), that.z());
   }
 }
