@@ -161,7 +161,7 @@ public interface Vector3d extends Vectord {
       && this.z() == that.z();
   }
 
-  default double dot(Vector3d other) {
-    return this.x() * other.x() + this.y() * other.y() + this.z() * other.z();
+  default double dot(final Vector3d that) {
+    return this.x() * that.x() + this.y() * that.y() + this.z() * that.z();
   }
 }

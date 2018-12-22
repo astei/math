@@ -161,7 +161,7 @@ public interface Vector3f extends Vectorf {
       && this.z() == that.z();
   }
 
-  default float dot(Vector3f other) {
-    return this.x() * other.x() + this.y() * other.y() + this.z() * other.z();
+  default float dot(final Vector3f that) {
+    return this.x() * that.x() + this.y() * that.y() + this.z() * that.z();
   }
 }
